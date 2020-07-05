@@ -7,6 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_BUILD_TYPE Release)
 
 include_directories(include/*)
-file(GLOB SOURCE_DIR "src/*.cpp" "include/*.h")
+file(GLOB SOURCE_DIR "src/*.cc" "include/*.h")
 
 add_executable(algorithms-lib ${SOURCE_DIR})
