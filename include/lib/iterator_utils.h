@@ -3,7 +3,7 @@
 
 #include <iterator>
 
-template <typename Itr, typename OtherItr>
+template <typename Itr>
 class CustomItr {
   public:
     using difference_type = typename std::iterator_traits<Itr>::difference_type;
@@ -19,12 +19,12 @@ class CustomItr {
 
     /* Iterator overloaded operators */
 
-    bool operator ==(const CustomItr<OtherItr> &rhs) const;
-    bool operator !=(const CustomItr<OtherItr> &rhs) const;
-    bool operator <=(const CustomItr<OtherItr> &rhs) const;
-    bool operator <(const CustomItr<OtherItr> &rhs) const;
-    bool operator >=(const CustomItr<OtherItr> &rhs) const;
-    bool operator >(const CustomItr<OtherItr> &rhs) const;
+    template <typename OtherItr> bool operator ==(const CustomItr<OtherItr> &rhs) const;
+    template <typename OtherItr> bool operator !=(const CustomItr<OtherItr> &rhs) const;
+    template <typename OtherItr> bool operator <=(const CustomItr<OtherItr> &rhs) const;
+    template <typename OtherItr> bool operator <(const CustomItr<OtherItr> &rhs) const;
+    template <typename OtherItr> bool operator >=(const CustomItr<OtherItr> &rhs) const;
+    template <typename OtherItr> bool operator >(const CustomItr<OtherItr> &rhs) const;
 
     reference operator[](difference_type index) const;
     reference operator *() const;

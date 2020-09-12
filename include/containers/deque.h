@@ -19,12 +19,12 @@ class Deque {
     /**
      * Adds element  
      */
-    void add(const val& value);
-    void addFront(const val& value);
-    void addBack(const val& value);
-    void enqueue(const val &value);
-    void enqueueFront(const val &value);
-    void enqueueBack(const val &value);
+    void add(const val& input);
+    void addFront(const val& input);
+    void addBack(const val& input);
+    void enqueue(const val &input);
+    void enqueueFront(const val &input);
+    void enqueueBack(const val &input);
 
     const val& front() const;
     const val& back() const;
